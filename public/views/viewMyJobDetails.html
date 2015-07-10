@@ -1,0 +1,65 @@
+<button class="btn btn-primary" type="button" ng-click="updateJob(job._id)">Update</button>
+<button class="btn btn-danger" type="button" ng-click="removeJob(job._id)">Delete</button>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+        	<th>Key</th>
+            <th>Value</th>
+        </tr>
+    </thead>
+    <tbody id="classes">
+        <tr>
+        	<td>Id</td>
+        	<td>{{job.jobId}}</td>
+        </tr>
+        <tr>
+            <td>Priority</td>
+            <td><input type="text" id="priority" ng-model="job.priority"/></td>
+        </tr>
+        <tr>
+        	<td>Title</td>
+        	<td>{{job.title}}</td>
+        </tr>
+        <tr>
+            <td>Location</td>
+            <td>{{job.location}}</td>
+        </tr>
+        <tr>
+            <td>Bookmarked on</td>
+            <td>{{job.bookmarkedOn}}</td>
+        </tr>
+        <tr>
+        	<td>Posted on</td>
+        	<td>{{job.createdAt}}</td>
+        </tr>
+        <tr>
+        	<td>Job Type</td>
+        	<td>{{job.type}}</td>
+        </tr>
+        <tr>
+        	<td>Description</td>
+        	<td>{{job.description}}</td>
+        </tr>
+        <tr>
+        	<td>How to apply</td>
+        	<td>{{job.howToApply}}</td>
+        </tr>
+        <tr>
+        	<td>Company</td>
+        	<td>{{job.companyName}}</td>
+        </tr>
+        <tr>
+        	<td>Company Url</td>
+        	<td><a href="{{company.url}}">{{company.url}}</a></td>
+        </tr>
+        <tr>
+        	<td>Company logo</td>
+        	<td><img src="{{company.logo}}" width="200px" height = "200px"/></td>
+        </tr>
+        <tr>
+        	<td>Url</td>
+        	<td><a href="{{job.url}}">{{job.url}}</a></td>
+        </tr>
+    </tbody>
+</table>

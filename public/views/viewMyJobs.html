@@ -1,0 +1,32 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Saved on</th>
+            <th>Location</th>
+            <th>Type</th>
+            <th>Priority</th>
+            <th>Company</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody id="classes">
+        <tr ng-repeat="job in jobs">
+            <td class="title">{{job.title}}</td>
+            <td class="createdOn">{{job.bookmarkedOn}}</td>
+            <td class="location">{{job.location}}</td>
+            <td class="type">{{job.type}}</td>
+            <td class="type">{{job.priority}}</td>
+            <td class="company">{{job.name}}</td>
+            <td class="details">
+            	<a href="/viewMyJobDetails/{{job._id}}" class="btn btn-primary" role="button">
+                    <span class="glyphicon glyphicon-list"></span>
+                </a>
+            	<button ng-click="removeJob(job._id)"class="btn btn-danger remove">
+                	<span class="glyphicon glyphicon-trash"></span>
+              	</button>
+       	 	</td>
+        </tr>
+    </tbody>
+</table>
+

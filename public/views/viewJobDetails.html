@@ -1,0 +1,63 @@
+<form class="form-inline">
+    <div class="form-group">
+        <label for="priority">Priority:</label>
+        <input type="text" id="priority" ng-model="job.priority"/>
+    </div>
+    <button class="btn btn-primary" type="submit" ng-click="saveJob()">Bookmark Job</button>
+    <alert ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>
+</form>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+        	<th>Key</th>
+            <th>Value</th>
+        </tr>
+    </thead>
+    <tbody id="classes">
+        <tr>
+        	<td>Id</td>
+        	<td>{{job.id}}</td>
+        </tr>
+        <tr>
+        	<td>Title</td>
+        	<td>{{job.title}}</td>
+        </tr>
+        <tr>
+            <td>Location</td>
+            <td>{{job.location}}</td>
+        </tr>
+        <tr>
+        	<td>Posted on</td>
+        	<td>{{job.created_at}}</td>
+        </tr>
+        <tr>
+        	<td>Job Type</td>
+        	<td>{{job.type}}</td>
+        </tr>
+        <tr>
+        	<td>Description</td>
+        	<td>{{job.description}}</td>
+        </tr>
+        <tr>
+        	<td>How to apply</td>
+        	<td>{{job.how_to_apply}}</td>
+        </tr>
+        <tr>
+        	<td>Company</td>
+        	<td>{{job.company}}</td>
+        </tr>
+        <tr>
+        	<td>Company Url</td>
+        	<td><a href="{{job.company_url}}">{{job.company_url}}</a></td>
+        </tr>
+        <tr>
+        	<td>Company logo</td>
+        	<td><img src="{{job.company_logo}}" width="200px" height = "200px"/></td>
+        </tr>
+        <tr>
+        	<td>Url</td>
+        	<td><a href="{{job.url}}">{{job.url}}</a></td>
+        </tr>
+    </tbody>
+</table>
